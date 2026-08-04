@@ -6,8 +6,8 @@ A contactless heart-rhythm monitor built for Qutuhal InnovateX 2.0 (Grade 9, Fro
 
 **Live site:** https://adhvi29.github.io/radiobeat/
 
-By **Adhvik Mahesh** — Grade 9, Global Indian International School (GIIS), Dubai
-📧 [adhvikmahesh29@gmail.com](mailto:adhvikmahesh29@gmail.com)
+By **Adhvik Mahesh** — Grade 9, Global Indian International School (GIIS PG), Singapore
+📧 [adhvikmahesh29@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=adhvikmahesh29@gmail.com)
 
 ## The problem
 
