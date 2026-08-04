@@ -4,6 +4,11 @@
 
 A contactless heart-rhythm monitor built for Qutuhal InnovateX 2.0 (Grade 9, Frontier Innovators).
 
+**Live site:** https://adhvi29.github.io/radiobeat/
+
+By **Adhvik Mahesh** — Grade 9, Global Indian International School (GIIS), Dubai
+📧 [adhvikmahesh29@gmail.com](mailto:adhvikmahesh29@gmail.com)
+
 ## The problem
 
 A dangerous irregular heartbeat called **atrial fibrillation (AFib)** makes the heart beat unevenly. That lets blood sit still inside the heart and form a clot, and if the clot reaches the brain it causes a stroke.
