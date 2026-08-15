@@ -528,11 +528,11 @@ footer{border-top:1px solid var(--line);padding:40px 0 64px;background:var(--bg)
       <div class="rstep is-done rv d1" data-week="2"><div class="wk">Week 02</div><h4>Two nodes talking</h4>
         <span class="pill done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Done</span>
         <br><button class="det-btn">Details ↗</button></div>
-      <div class="rstep is-now rv d2" data-week="3"><div class="wk">Week 03</div><h4>Breathing detected</h4>
-        <span class="pill now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>In progress</span>
+      <div class="rstep is-done rv d2" data-week="3"><div class="wk">Week 03</div><h4>Breathing detected</h4>
+        <span class="pill done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Done</span>
         <br><button class="det-btn">Details ↗</button></div>
-      <div class="rstep rv d1" data-week="4"><div class="wk">Week 04</div><h4>Heartbeat extracted</h4>
-        <span class="pill next">Planned</span>
+      <div class="rstep is-now rv d1" data-week="4"><div class="wk">Week 04</div><h4>Heartbeat extracted</h4>
+        <span class="pill now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>In progress</span>
         <br><button class="det-btn">Details ↗</button></div>
       <div class="rstep rv d2" data-week="5"><div class="wk">Week 05</div><h4>Irregular-rhythm alert</h4>
         <span class="pill next">Planned</span>
@@ -541,7 +541,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 64px;background:var(--bg)
         <span class="pill next">Planned</span>
         <br><button class="det-btn">Details ↗</button></div>
     </div>
-    <p class="mono rv" style="margin-top:26px;font-size:11px;letter-spacing:.04em;color:var(--faint)">// Week 2 complete: ESP32-WROOM-32E broadcasting on ch 1 &bull; M5StickC Plus2 connected at &minus;17 dBm &bull; real CSI streaming (128 bytes / packet, 64 subcarriers) &bull; Week 3 underway.</p>
+    <p class="mono rv" style="margin-top:26px;font-size:11px;letter-spacing:.04em;color:var(--faint)">// Week 3 complete: breathing waveform live &bull; 0.15&ndash;0.5 Hz band-pass filter &bull; ~10 CSI packets/sec via UDP heartbeat &bull; Week 4 underway.</p>
   </div>
 </section>
 
@@ -792,17 +792,15 @@ measure();tick();
     },
     3:{
       label:"Week 03",title:"Breathing Detected",
-      done:[],
-      now:[
-        "Stream CSI packets from M5StickC to laptop via USB serial",
-        "Write a Python script to parse the raw CSI bytes into 64 I/Q amplitude values"
+      done:[
+        "Updated receiver firmware to output CSI as CSV lines over USB serial (64 amplitude values per packet)",
+        "Added UDP heartbeat ping every 100ms to generate continuous WiFi frame exchanges and keep CSI flowing",
+        "Disabled WiFi power management (WIFI_PS_NONE) so the chip stays awake and receiving",
+        "Built a real-time Python dashboard using pyqtgraph — raw CSI on top, filtered waveform below",
+        "Applied a 0.15–0.5 Hz band-pass filter to isolate breathing from the noisy CSI signal",
+        "Breathing waveform confirmed live — each wave is one breath, visible in real time"
       ],
-      plan:[
-        "Plot subcarrier amplitude over time — breathing should appear as a slow wave (~0.3 Hz)",
-        "Apply a band-pass filter (0.2–0.4 Hz) to isolate the breathing signal",
-        "Visualise clean breathing waveform on the laptop dashboard",
-        "Calculate breaths per minute from peak detection"
-      ]
+      plan:[]
     },
     4:{
       label:"Week 04",title:"Heartbeat Extracted",
