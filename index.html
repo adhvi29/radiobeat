@@ -493,7 +493,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 64px;background:var(--bg)
   </div>
   <div class="box" style="max-width:1120px">
     <div class="bento">
-      <div class="cell heat rv"><canvas id="heatmap"></canvas><div class="over"><span class="plabel2">CSI amplitude · subcarriers × time</span><div><div class="mono" style="font-size:12px;color:rgba(255,255,255,.9)">LIVE STREAM</div><div class="mono" style="font-size:10.5px;color:rgba(255,255,255,.55);letter-spacing:.08em">64 SUBCARRIERS · 20 Hz</div><div class="hscale"><span>Low</span><i></i><span>High</span></div></div></div></div>
+      <div class="cell heat rv"><canvas id="heatmap"></canvas><div class="over"><span class="plabel2">CSI amplitude · subcarriers × time</span><div><div class="mono" style="font-size:12px;color:rgba(255,255,255,.9)">LIVE STREAM</div><div class="mono" style="font-size:10.5px;color:rgba(255,255,255,.55);letter-spacing:.08em">64 SUBCARRIERS · 100 Hz</div><div class="hscale"><span>Low</span><i></i><span>High</span></div></div></div></div>
       <div class="cell feat rv d1"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2M9 9h6v6H9z"/></svg></div><div class="kpi">ESP32</div><h4 style="margin-top:8px">A common WiFi chip reads CSI</h4><p>The receiver pulls Channel State Information straight off the radio. No special hardware required.</p></div>
       <div class="cell third rv d2"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3-9 5-9 8 0s5 9 8 0"/></svg></div><h4>Band-pass filtering</h4><p>Carves the heart band away from breathing.</p><svg class="filter-mini" viewBox="0 0 200 66" preserveAspectRatio="none"><path d="M0 58 C40 58 55 56 78 24 C90 8 110 8 122 24 C145 56 160 58 200 58" fill="none" stroke="rgba(124,92,255,.55)" stroke-width="2"/><path d="M0 58 C40 58 55 56 78 24 C90 8 110 8 122 24 C145 56 160 58 200 58 L200 66 L0 66 Z" fill="rgba(124,92,255,.07)"/></svg></div>
       <div class="cell third rv d3"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22a7 7 0 0 0 7-7c0-3-2-5-7-13C7 10 5 12 5 15a7 7 0 0 0 7 7Z"/></svg></div><h4>~$20 of parts</h4><p>A transmitter and a receiver. Two ordinary WiFi chips, about $20 for the pair.</p></div>
@@ -531,17 +531,17 @@ footer{border-top:1px solid var(--line);padding:40px 0 64px;background:var(--bg)
       <div class="rstep is-done rv d2" data-week="3"><div class="wk">Week 03</div><h4>Breathing detected</h4>
         <span class="pill done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Done</span>
         <br><button class="det-btn">Details ↗</button></div>
-      <div class="rstep is-now rv d1" data-week="4"><div class="wk">Week 04</div><h4>Heartbeat extracted</h4>
-        <span class="pill now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>In progress</span>
+      <div class="rstep is-done rv d1" data-week="4"><div class="wk">Week 04</div><h4>Heartbeat extracted</h4>
+        <span class="pill done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Done</span>
         <br><button class="det-btn">Details ↗</button></div>
-      <div class="rstep rv d2" data-week="5"><div class="wk">Week 05</div><h4>Irregular-rhythm alert</h4>
-        <span class="pill next">Planned</span>
+      <div class="rstep is-now rv d2" data-week="5"><div class="wk">Week 05</div><h4>Irregular-rhythm alert</h4>
+        <span class="pill now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>In progress</span>
         <br><button class="det-btn">Details ↗</button></div>
       <div class="rstep rv d3" data-week="6"><div class="wk">Week 06</div><h4>Validate &amp; demo</h4>
         <span class="pill next">Planned</span>
         <br><button class="det-btn">Details ↗</button></div>
     </div>
-    <p class="mono rv" style="margin-top:26px;font-size:11px;letter-spacing:.04em;color:var(--faint)">// Week 3 complete: breathing waveform live &bull; 0.15&ndash;0.5 Hz band-pass filter &bull; ~10 CSI packets/sec via UDP heartbeat &bull; Week 4 underway.</p>
+    <p class="mono rv" style="margin-top:26px;font-size:11px;letter-spacing:.04em;color:var(--faint)">// Week 4 complete: heartbeat extracted &bull; 100 CSI packets/sec &bull; raw I/Q with phase sanitisation &bull; harmonic regression removes breathing &bull; FFT + autocorrelation fusion &bull; fan/AC interference rejection &bull; Week 5 underway.</p>
   </div>
 </section>
 
@@ -804,15 +804,28 @@ measure();tick();
     },
     4:{
       label:"Week 04",title:"Heartbeat Extracted",
-      plan:[
-        "Apply a second band-pass filter (0.8–2.0 Hz) to isolate heartbeat from breathing",
-        "Detect individual heartbeat peaks in the filtered signal",
-        "Calculate BPM and display it in real time on the dashboard",
-        "Compare against a pulse oximeter reading to verify accuracy"
-      ]
+      done:[
+        "Raised the CSI sample rate from 20 to 100 packets/sec — evenly paced with vTaskDelayUntil and a persistent UDP socket, at 921600 baud",
+        "Switched the firmware to send raw I/Q instead of magnitude, so phase (far more sensitive to sub-millimetre chest motion) survives to the host",
+        "Locked CSI to LLTF-only so every packet is exactly 64 subcarriers with an identical layout",
+        "Each packet is timestamped by the ESP32\'s own microsecond clock, removing USB buffering jitter that was smearing the heartbeat peak",
+        "Phase sanitisation: per-packet offset and linear slope removed across subcarriers, leaving genuine path-length change",
+        "Harmonic regression subtracts breathing and its first 8 harmonics in the time domain — this fixed a false 70 BPM reading that was really the 4th harmonic of breathing",
+        "Subcarriers ranked by in-band SNR; the most responsive third are kept and combined by PCA",
+        "Fused estimator: a harmonic-sum spectrum and an autocorrelation run independently, and only report LOCKED when they agree within 12%",
+        "Motion gate freezes the reading instead of reporting noise when the subject shifts",
+        "Fan and AC rejection: a 20-second empty-room calibration learns mechanical interference lines and notches them out",
+        "Human-vs-machine discriminator — a motor holds its rate to under 0.5% while human vitals wander 2–5%, so an over-steady peak is rejected as mechanical",
+        "Live dashboard shows breathing, heartbeat, spectra and a heart-rate trend, and logs every estimate to CSV for accuracy analysis"
+      ],
+      plan:[]
     },
     5:{
       label:"Week 05",title:"Irregular-Rhythm Alert",
+      now:[
+        "Extending the heartbeat tracker from an averaged rate to individual beat timings",
+        "Logging every estimate to CSV so rhythm variability can be measured over long runs"
+      ],
       plan:[
         "Measure beat-to-beat (RR) interval variability",
         "Flag irregular patterns that match AFib signature (no consistent RR spacing)",
